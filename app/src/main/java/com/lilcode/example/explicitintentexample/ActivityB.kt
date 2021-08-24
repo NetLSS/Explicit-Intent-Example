@@ -27,7 +27,8 @@ class ActivityB : AppCompatActivity() {
     }
 
     override fun finish() {
-        val data = Intent()
+        //val data = Intent()
+        val data = Intent(this, MainActivity::class.java) // 최신 방법
         val returnString = binding.editText2.text.toString()
         data.putExtra("returnData", returnString)
         setResult(RESULT_OK, data)
